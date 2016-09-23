@@ -87,7 +87,7 @@ systemctl restart memcached
 
 
 #### INSTALL php 7
-yum install  php70-php php70-php-common php70-php-devel php70-php-fpm php70-php-gd php70-php-mbstring php70-php-mcrypt php70-php-mysqlnd php70-php-pear php70-php-xml php70-php-pecl-memcached php70-php-pecl-memcache php70-php-pecl-imagick php70-php-opcache -y
+yum install  php70-php php70-php-common php70-php-devel php70-php-fpm php70-php-gd php70-php-mbstring php70-php-mcrypt php70-php-mysqlnd php70-php-pear php70-php-xml php70-php-pecl-memcached php70-php-pecl-memcache php70-php-pecl-imagick php70-php-opcache php70-php-zip -y
 mv /usr/bin/php70 /usr/bin/php
 
 
