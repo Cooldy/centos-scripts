@@ -1,4 +1,7 @@
+#!/bin/bash
+#sed -i 's/\r$//' "centOS 7 - webserver setup.sh" # run this before the file
 ## update
+
 yum update -y
 
 
