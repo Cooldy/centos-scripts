@@ -52,8 +52,8 @@ yum-config-manager --enable mysql57-community-dmr -y
 yum update -y
 yum install mysql-community-server -y
 
-echo "sql_mode=''" » /etc/my.cnf
-echo "default_password_lifetime=0" » /etc/my.cnf
+echo "sql_mode=''" >> /etc/my.cnf
+#echo "default_password_lifetime=0" » /etc/my.cnf
 
 
 ### Install nginx
@@ -87,8 +87,8 @@ systemctl restart memcached
 
 
 #### INSTALL php 7
-yum install  php70-php php70-php-common php70-php-devel php70-php-fpm php70-php-gd php70-php-mbstring php70-php-mcrypt php70-php-mysqlnd php70-php-pear php70-php-xml php70-php-pecl-memcached php70-php-pecl-memcache php70-php-pecl-imagick php70-php-opcache php70-php-zip -y
-mv /usr/bin/php70 /usr/bin/php
+#yum install  php70-php php70-php-common php70-php-devel php70-php-fpm php70-php-gd php70-php-mbstring php70-php-mcrypt php70-php-mysqlnd php70-php-pear php70-php-xml php70-php-pecl-memcached php70-php-pecl-memcache php70-php-pecl-imagick php70-php-opcache php70-php-zip -y
+#mv /usr/bin/php70 /usr/bin/php
 
 #### INSTALL php 7
 yum install  php72-php php72-php-common php72-php-devel php72-php-fpm php72-php-gd php72-php-mbstring php72-php-mcrypt php72-php-mysqlnd php72-php-pear php72-php-xml php72-php-pecl-memcached php72-php-pecl-memcache php72-php-pecl-imagick php72-php-opcache php72-php-zip -y
@@ -98,14 +98,7 @@ mv /usr/bin/php72 /usr/bin/php
 #temp password for mysql 
 #sudo grep 'temporary password' /var/log/mysqld.log
 #changing password for mysql
-mysqladmin -u root -p'old' password 'new'
-
-
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php -r "if (hash_file('SHA384', 'composer-setup.php') === 'e115a8dc7871f15d853148a7fbac7da27d6c0030b848d9b3dc09e2a0388afed865e6a3d6b3c0fad45c48e2b5fc1196ae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-php composer-setup.php
-php -r "unlink('composer-setup.php');"
-mv composer.phar /usr/bin/composer
+#mysqladmin -u root -p'old' password 'new'
 
 #lumen 
 #composer create-project --prefer-dist laravel/lumen lumen_proj
